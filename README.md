@@ -1,8 +1,8 @@
-# SMART HEALTHCARE CONSULTANT
+# MODERN HEALTHCARE CONSULTANT
 
 ## Overview
 
-Smart Healthcare Consultant is a modern healthcare illness detection system with an AI-powered healthcare web application that predicts possible illnesses based on user symptoms using Machine Learning and Large Language Models (LLMs).
+Modern Healthcare Consultant is a smart healthcare illness detection system with an AI-powered healthcare web application that predicts possible illnesses based on user symptoms using Machine Learning and Large Language Models (LLMs).
 
 The system allows users to:
 
