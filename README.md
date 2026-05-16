@@ -168,20 +168,21 @@ Healthcare Guidance Displayed
 * HOMEPAGE SCREENSHOT
 <img width="938" height="499" alt="Screenshot-frontpage" src="https://github.com/user-attachments/assets/189c3581-1aae-4f06-8c82-f8bf63bae0fa" />
 
+---
 
 * LEARN MORE SCREENSHOT
 <img width="936" height="500" alt="Screenshot-learn more" src="https://github.com/user-attachments/assets/7bd4bf3f-0c08-4e5b-8a15-e3122c224379" />
 
-
+---
 
 *SYMTOPMS CHECK SCREENSHOT
 <img width="938" height="503" alt="screenshot-2" src="https://github.com/user-attachments/assets/343781c4-c12b-45fc-ae25-33496a0ffaf4" />
 
 <img width="855" height="499" alt="screenshot-1" src="https://github.com/user-attachments/assets/739c2033-0bb9-47f2-929f-c67933fa2e3c" />
 
+---
 
-
-*ILLNESS PREDICTION SCREENSHOT
+*<u>ILLNESS PREDICTION SCREENSHOT</u>
 <img width="773" height="397" alt="screenshot-3" src="https://github.com/user-attachments/assets/4744313a-2589-428d-8c70-43aeca04909d" />
 
 
