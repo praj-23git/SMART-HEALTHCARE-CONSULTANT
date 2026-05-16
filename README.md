@@ -165,6 +165,7 @@ Healthcare Guidance Displayed
 
 # Screenshots
 
+* HOMEPAGE
 <img width="938" height="499" alt="Screenshot-frontpage" src="https://github.com/user-attachments/assets/189c3581-1aae-4f06-8c82-f8bf63bae0fa" />
 
 
