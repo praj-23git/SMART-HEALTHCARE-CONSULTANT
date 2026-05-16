@@ -1,0 +1,555 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: linear-gradient(to right,#021B79,#0575E6);
+    color:white;
+    min-height:100vh;
+}
+
+/* Navbar */
+
+.navbar{
+    width:100%;
+    padding:25px 70px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.btn-nav{
+    text-decoration:none;
+    background:#4F46E5;
+    padding:14px 28px;
+    border-radius:12px;
+    color:white;
+    font-weight:600;
+}
+
+/* Hero Section */
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px;
+
+    min-height:85vh;
+}
+
+/* Left */
+
+.hero-text{
+    max-width:800px;
+}
+
+.hero-text h1{
+    font-size:85px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-text span{
+    color:#38BDF8;
+}
+
+.hero-text h2{
+    color:#38BDF8;
+    margin-bottom:25px;
+    font-size:38px;
+}
+
+.hero-text p{
+    font-size:20px;
+    line-height:1.8;
+    color:#dbeafe;
+    margin-bottom:40px;
+}
+
+/* Buttons */
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    width:100%;
+}
+
+.main-btn{
+    text-decoration:none;
+    background:linear-gradient(to right,#0EA5E9,#4F46E5);
+    padding:18px 35px;
+    border-radius:15px;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.secondary-btn{
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,0.5);
+    padding:18px 35px;
+    border-radius:15px;
+    color:white;
+    font-weight:600;
+}
+
+/* Hover */
+
+.main-btn:hover,
+.secondary-btn:hover,
+.btn-nav:hover{
+    transform:translateY(-5px);
+}
+
+/* Right */
+
+.hero-image img{
+    width:650px;
+}
+/* Predict Page */
+
+.predict-body{
+    background:#f4f7ff;
+    color:#111827;
+}
+
+.predict-section{
+    padding:60px;
+}
+
+.predict-container{
+    background:white;
+    border-radius:30px;
+    padding:50px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.1);
+}
+
+.predict-container h1{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:15px;
+
+    color:#111827;
+}
+
+.predict-container p{
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:50px;
+
+    font-size:18px;
+}
+
+.symptom-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.symptom-card{
+    background:#f9fbff;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    border:1px solid #e5e7eb;
+}
+
+.symptom-card label{
+    display:block;
+
+    margin-bottom:15px;
+
+    font-weight:600;
+
+    color:#111827;
+}
+
+.symptom-card select{
+    width:100%;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid #d1d5db;
+
+    font-size:16px;
+}
+
+.predict-btn{
+    width:100%;
+
+    margin-top:40px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(to right,#2563eb,#4f46e5);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.predict-btn:hover{
+    transform:translateY(-3px);
+}
+
+.result-box{
+    margin-top:40px;
+
+    background:#eff6ff;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+}
+
+.result-box h2{
+    margin-bottom:15px;
+
+    color:#1e3a8a;
+}
+
+.prediction-result{
+    font-size:40px;
+
+    font-weight:700;
+
+    color:#2563eb;
+}
+/* About Section */
+
+.about-section{
+    padding:100px 80px;
+
+    background:white;
+
+    color:#111827;
+
+    text-align:center;
+}
+
+.about-section h1{
+    font-size:55px;
+
+    margin-bottom:30px;
+}
+
+.about-text{
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#6b7280;
+
+    margin-bottom:60px;
+}
+
+.features{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.feature-card{
+    background:#f9fafb;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.feature-card h2{
+    margin-bottom:20px;
+
+    color:#2563eb;
+}
+
+.feature-card p{
+    color:#6b7280;
+
+    line-height:1.7;
+}
+.ai-box{
+    margin-top:30px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+    line-height:1.8;
+
+    color:#374151;
+
+    text-align:left;
+}
+
+.ai-box h2{
+    margin-bottom:20px;
+
+    color:#2563eb;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Apply animations */
+
+.hero-text h1 {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.hero-text h2 {
+    animation: fadeIn 0.9s ease-out 0.2s both;
+}
+
+.hero-text p {
+    animation: fadeIn 1s ease-out 0.4s both;
+}
+
+.hero-buttons {
+    animation: fadeIn 1.1s ease-out 0.6s both;
+}
+
+.predict-container {
+    animation: scaleIn 0.6s ease-out;
+}
+
+.predict-container h1 {
+    animation: fadeIn 0.7s ease-out;
+}
+
+.predict-container p {
+    animation: fadeIn 0.8s ease-out 0.1s both;
+}
+
+.symptom-card {
+    animation: fadeIn 0.6s ease-out;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.symptom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background: #f3f4f6;
+}
+
+.symptom-card select {
+    transition: all 0.3s ease;
+}
+
+.symptom-card select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    transform: scale(1.02);
+}
+
+.predict-btn {
+    animation: fadeIn 0.8s ease-out;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.predict-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+}
+
+.predict-btn:active {
+    transform: translateY(-2px);
+}
+
+.result-box {
+    animation: slideInLeft 0.7s ease-out;
+}
+
+.result-box h2 {
+    animation: fadeIn 0.6s ease-out 0.1s both;
+}
+
+.prediction-result {
+    animation: scaleIn 0.7s ease-out 0.2s both;
+}
+
+.ai-box {
+    animation: slideInRight 0.7s ease-out 0.3s both;
+}
+
+.ai-box h2 {
+    animation: fadeIn 0.6s ease-out 0.4s both;
+}
+
+.ai-box p {
+    animation: fadeIn 0.7s ease-out 0.5s both;
+}
+
+.main-btn, .secondary-btn, .btn-nav {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-btn:hover, .secondary-btn:hover, .btn-nav:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth page transitions */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading effect */
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Navbar animation */
+
+.navbar {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+/* Hero section animation */
+
+.hero {
+    animation: fadeIn 0.8s ease-out;
+}

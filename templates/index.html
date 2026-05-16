@@ -1,0 +1,310 @@
+Save this entire code directly inside `templates/index.html`.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Healthcare System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 28px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+            color: white;
+        }
+
+        .top {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .top h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .top p {
+            color: rgba(255,255,255,0.8);
+            font-size: 18px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 18px;
+            padding: 18px;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.12);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            background: rgba(255,255,255,0.95);
+            font-size: 15px;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 35px;
+            padding: 18px;
+            border: none;
+            border-radius: 16px;
+            background: linear-gradient(to right, #38bdf8, #2563eb);
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(37,99,235,0.5);
+        }
+
+        .result {
+            margin-top: 35px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .result h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .prediction {
+            font-size: 34px;
+            font-weight: 700;
+            color: #7dd3fc;
+        }
+
+        @media(max-width: 768px){
+            .container {
+                padding: 25px;
+            }
+
+            .top h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top">
+        <h1>🩺 AI Healthcare Assistant</h1>
+        <p>Smart illness prediction powered by Machine Learning</p>
+    </div>
+
+    <form action="/predict" method="POST">
+
+        <div class="grid">
+
+            <div class="card">
+                <label>Fever</label>
+                <select name="Fever">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Cough</label>
+                <select name="Cough">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Headache</label>
+                <select name="Headache">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Fatigue</label>
+                <select name="Fatigue">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Nausea</label>
+                <select name="Nausea">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Vomiting</label>
+                <select name="Vomiting">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Diarrhea</label>
+                <select name="Diarrhea">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Shortness Of Breath</label>
+                <select name="ShortnessOfBreath">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Chest Pain</label>
+                <select name="ChestPain">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Dizziness</label>
+                <select name="Dizziness">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Blurred Vision</label>
+                <select name="BlurredVision">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Chills & Sweating</label>
+                <select name="ChillsSweating">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Joint/Muscle Pain</label>
+                <select name="JointMusclePain">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Abdominal Pain</label>
+                <select name="AbdominalPain">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Loss Of Taste/Smell</label>
+                <select name="LossOfTasteSmell">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label>Sore Throat</label>
+                <select name="SoreThroat">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button class="btn" type="submit">Predict Illness</button>
+
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        <h2>Prediction Result</h2>
+        <div class="prediction">{{ prediction }}</div>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
+```
+
+Then:
+
+1. Save the file
+2. Run `python app.py`
+3. Refresh browser

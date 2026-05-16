@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Symptom Checker</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="predict-body">
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🩺 Modern Healthcare
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Main Section -->
+
+    <section class="predict-section">
+
+        <div class="predict-container">
+
+            <h1>🩺 Symptom Checker</h1>
+
+            <p>
+                Select your symptoms below and let AI predict
+                possible illness instantly.
+            </p>
+
+            <form action="/predict" method="POST">
+
+                <div class="symptom-grid">
+
+                    <!-- Fever -->
+
+                    <div class="symptom-card">
+                        <label>Fever</label>
+
+                        <select name="Fever">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Cough -->
+
+                    <div class="symptom-card">
+                        <label>Cough</label>
+
+                        <select name="Cough">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Headache -->
+
+                    <div class="symptom-card">
+                        <label>Headache</label>
+
+                        <select name="Headache">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Fatigue -->
+
+                    <div class="symptom-card">
+                        <label>Fatigue</label>
+
+                        <select name="Fatigue">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Nausea -->
+
+                    <div class="symptom-card">
+                        <label>Nausea</label>
+
+                        <select name="Nausea">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Vomiting -->
+
+                    <div class="symptom-card">
+                        <label>Vomiting</label>
+
+                        <select name="Vomiting">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Diarrhea -->
+
+                    <div class="symptom-card">
+                        <label>Diarrhea</label>
+
+                        <select name="Diarrhea">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Rash -->
+
+                    <div class="symptom-card">
+                        <label>Rash</label>
+
+                        <select name="Rash">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Shortness -->
+
+                    <div class="symptom-card">
+                        <label>Shortness Of Breath</label>
+
+                        <select name="ShortnessOfBreath">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Blurred -->
+
+                    <div class="symptom-card">
+                        <label>Blurred Vision</label>
+
+                        <select name="BlurredVision">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Chills -->
+
+                    <div class="symptom-card">
+                        <label>Chills & Sweating</label>
+
+                        <select name="ChillsSweating">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Joint -->
+
+                    <div class="symptom-card">
+                        <label>Joint/Muscle Pain</label>
+
+                        <select name="JointMusclePain">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Abdomen -->
+
+                    <div class="symptom-card">
+                        <label>Abdominal Pain</label>
+
+                        <select name="AbdominalPain">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Taste -->
+
+                    <div class="symptom-card">
+                        <label>Loss Of Taste/Smell</label>
+
+                        <select name="LossOfTasteSmell">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Sneezing -->
+
+                    <div class="symptom-card">
+                        <label>Sneezing</label>
+
+                        <select name="Sneezing">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Throat -->
+
+                    <div class="symptom-card">
+                        <label>Sore Throat</label>
+
+                        <select name="SoreThroat">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button class="predict-btn">
+                    Predict Illness
+                </button>
+
+            </form>
+
+            {% if prediction %}
+
+            <div class="result-box">
+
+                <h2>Prediction Result</h2>
+
+                <div class="prediction-result">
+                    {{ prediction }}
+                </div>
+
+                <div class="ai-box">
+
+                  <h2>Healthcare Assistant</h2>
+
+                  <p>
+                    {{ ai_response }}
+                  </p>
+
+                </div>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </section>
+
+</body>
+</html>
