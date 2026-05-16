@@ -165,6 +165,9 @@ Healthcare Guidance Displayed
 
 # Screenshots
 
+<img width="938" height="499" alt="Screenshot-frontpage" src="https://github.com/user-attachments/assets/189c3581-1aae-4f06-8c82-f8bf63bae0fa" />
+
+
 ## Home Page
 
 * Modern healthcare landing page
