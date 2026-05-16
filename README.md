@@ -182,7 +182,7 @@ Healthcare Guidance Displayed
 
 ---
 
-*<u>ILLNESS PREDICTION SCREENSHOT</u>
+*<ins>ILLNESS PREDICTION SCREENSHOT</ins>
 <img width="773" height="397" alt="screenshot-3" src="https://github.com/user-attachments/assets/4744313a-2589-428d-8c70-43aeca04909d" />
 
 
